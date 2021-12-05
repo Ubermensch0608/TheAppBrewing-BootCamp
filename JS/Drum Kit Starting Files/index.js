@@ -4,16 +4,19 @@ const heading = document.querySelectorAll(".drum");
 for (let i = 0; i < heading.length; i++) {
   heading[i].addEventListener("click", function () {
     const buttonInnerHTML = this.innerHTML;
-    handleClick(buttonInnerHTML);
+    soundPlayer(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
   });
 }
 
 // 키보드를 누를 때
-document.addEventListener("keydown", function (evnet) {
-  handleClick(evnet.key);
+document.addEventListener("keydown", function (event) {
+  soundPlayer(event.key);
+  buttonAnimation(event.key);
 });
 
-function handleClick(key) {
+// soundPlayer
+function soundPlayer(key) {
   switch (key) {
     case "w":
       const crash = new Audio("sounds/crash.mp3");
@@ -54,4 +57,12 @@ function handleClick(key) {
       console.log(buttonInnerHTML);
       break;
   }
+}
+
+function buttonAnimation(currentKey) {
+  const activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
 }
