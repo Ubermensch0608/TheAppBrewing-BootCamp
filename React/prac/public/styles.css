@@ -1,0 +1,46 @@
+h1 {
+  margin: 40px 20px 30px 20px;
+  padding: 10px;
+  background-color: darkgray;
+}
+
+.memoCard {
+  background-color: lemonchiffon;
+  width: 400px;
+  margin: 10px;
+  display: inline-block;
+  text-align: justify;
+  text-align-last: left;
+  -moz-text-align-last: left;
+}
+
+.memoTitle {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 10px 5px 10px;
+}
+
+.memoText {
+  font-size: 18px;
+  padding: 0px 10px 5px 10px;
+}
+
+td.postingTitle {
+  padding-top: 0;
+}
+.postingTitleInput {
+  width: 400px;
+  background-color: lemonchiffon;
+  border: none;
+  margin: 10px 10px 0px 10px;
+  padding-bottom: 0;
+}
+
+textarea.postingBox {
+  width: 400px;
+  height: 250px;
+  background-color: lemonchiffon;
+  border: none;
+  margin: 0px 10px 10px 10px;
+  padding-top: 0;
+}
